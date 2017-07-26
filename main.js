@@ -2,18 +2,37 @@
 // Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in JavaScript.
 // Then, write and example of using the function.
 
-function max(){
+function max(a, b){
     // Your answer here
+    if (a > b) {
+      return a;
+    } else if (a < b) {
+      return b;
+    } else {
+      return "Same value.";
+    }
 }
+console.log(max(3,10));
+console.log(max(73,40));
+console.log(max(5,5));
 
 
 // 2.
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
 // Then, write and example of using the function.
-
-function maxOfThree(){
-    // Your answer here
+function compare(x,y) {
+  return x - y;
 }
+function maxOfThree(a,b,c){
+    // Your answer here
+    let array = [a,b,c];
+    array.sort(compare);
+    console.log(array);
+    return array[2];
+}
+console.log(maxOfThree(5,35,300));
+console.log(maxOfThree(783,1000,-555));
+console.log(maxOfThree(-3, -5, -4));
 
 
 // 3.
@@ -22,13 +41,34 @@ function maxOfThree(){
 
 function isVowel(char){
     // Your answer here
+    if (isNaN(char)) {
+      if (char.toUpperCase() === "A" || char.toUpperCase() === "E" || char.toUpperCase() === "I" || char.toUpperCase() === "O" || char.toUpperCase() === "U") {
+        return true;
+      } else {
+        return char + " is not a vowel."
+      }
+    } else {
+      return char + " is a number and not eligible for this function.";
+    }
+
 }
+console.log(isVowel("a"));
+console.log(isVowel("E"));
+console.log(isVowel("K"));
+console.log(isVowel(5));
 
 
 // 4.
 // Write a function called `sum` that takes two parameters and returns the sum of those 2 numbers.
 // Then, write and example of using the function.
-
+function sum(a,b) {
+  return a + b;
+}
+console.log(sum(1,2));
+console.log(sum(-1,10));
+console.log(sum(0.35,8.2));
+console.log(sum("Hi","Justin"));
+console.log(sum(10, "10"));
 
 
 // 5.
